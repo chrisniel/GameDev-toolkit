@@ -1,0 +1,6 @@
+interface:
+  display_name: "GameDev Workflow Toolkit"
+  short_description: "Route complex game-development work safely"
+  default_prompt: "Use $gamedev-workflow-toolkit to route and coordinate this game-development task."
+policy:
+  allow_implicit_invocation: true
