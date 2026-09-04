@@ -48,7 +48,7 @@ This also protects existing prototypes: a greyboxing request does not authorize 
 
 ## How To Use It
 
-Follow [the client setup guide](../skill-portability.md), then run its read-only Kumpuni onboarding prompt in the actual game workspace. Review the selected skill paths and reported evidence gaps before requesting a feature change.
+Follow [the client setup guide](../06_Guides/skill-portability.md), then run its read-only Kumpuni onboarding prompt in the actual game workspace. Review the selected skill paths and reported evidence gaps before requesting a feature change.
 
 Keep complete skill folders together, especially the Unity skill's source notice. Keep copied material private and compare destination copies before replacement. No automatic installer was added.
 
@@ -65,7 +65,7 @@ Keep engine versions, exact scene paths, input choices, budgets, and Kumpuni des
 - Cross-client discovery and behavior: pending user verification; official documentation was reviewed, but no Claude/Gemini session was launched.
 - Kumpuni Editor, visual, performance, and device behavior: pending user verification; no game files were accessed or changed in this delivery.
 
-For repeatable manual prompts and expected results, use the [verification matrix](../skill-portability.md#manual-cross-client-verification).
+For repeatable manual prompts and expected results, use the [verification matrix](../06_Guides/skill-portability.md#manual-cross-client-verification).
 
 ## Limitations And Deferred Work
 
@@ -73,6 +73,6 @@ Skills cannot prove live Editor state without actual access or user evidence. A 
 
 ## Related Documentation
 
-- [Implementation plan](../08_Tracking/implementation-plan.md#1415-current-skills-only-delivery--2026-09-03)
-- [Task tracking](../08_Tracking/task.md)
-- [Provenance](../provenance.md)
+- [Implementation plan](../02_Planning/implementation-plan.md#1415-current-skills-only-delivery--2026-09-03)
+- [Task tracking](../01_Tracking/task.md)
+- [Provenance](../06_Guides/provenance.md)

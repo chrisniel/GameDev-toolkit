@@ -1,22 +1,11 @@
-# Task Tracking: GameDev Workflow Toolkit
+# Task Tracking Archive: GameDev Workflow Toolkit
 
-## Status Overview
-
-- **Current Phase:** Track S implemented and structurally validated — live-client and Kumpuni tests pending; custom MCP remains future-only
-- **Target:** Preserve the collision-safe 17-skill GameDev toolkit, strengthen its existing Unity workflows without requiring MCP, and evaluate a separately maintained, independently namespaced Unity MCP through read-only-first milestones.
-- **Scope Guard:** Skills-only strengthening and Gemini/Claude usage guidance were approved and implemented. No MCP runtime, dependencies, installations, external configuration, installed-copy synchronization, referenced-source modification, or Kumpuni edit is part of this delivery.
+Archived on: 2026-09-04
+Migration Component: Docs_ProjectWorkflowStarterKit_v2.0
 
 ---
 
-## Active & Pending Work
-
-### In Progress
-
-- [ ] User review of the skills-only delivery and cross-client verification matrix in `docs/skill-portability.md`.
-- [ ] User examination and real-project testing of the newly created and adapted skills.
-- [ ] User copy/use evaluation of `Docs_ProjectWorkflowStarterKit_v1.0` in another project.
-
-### Completed Work
+## Historical Completed Work (Phases 0–6 & Track S Specialization)
 
 - [X] Receive explicit approval on 2026-09-03 to set local `origin` to `https://github.com/chrisniel/GameDev-toolkit.git`, stage the current toolkit, and create a local commit. Pushing remains user-owned; remote visibility is not verified and public publication still awaits separate rights-holder permission.
 - [X] Read repository rules and the complete current `docs/` folder.
@@ -79,9 +68,6 @@
 - [X] Add official-source-checked cross-client setup guidance and a safe Kumpuni onboarding prompt without editing the game.
 - [X] Pass the repository validator and all 17 official quick checks; preserve 3,299 combined description characters.
 - [X] Complete the 2026-09-03 handoff checks: 57 Markdown files have valid local links and no trailing whitespace; PowerShell syntax, reference normalization, expected-count rejection, no-hard-MCP/no-root-license checks, and git diff whitespace validation pass.
-
-### Remaining / Upcoming
-
 - [X] Specialize and namespace the retained GameDev skills.
 - [X] Merge useful GameDev guidance from overlapping app/web skills into the approved destination skills.
 - [X] Delete the approved out-of-scope and superseded skill folders only after useful GameDev material has been preserved.
@@ -89,32 +75,12 @@
 - [X] Create `gamedev-rendering-shaders` with HLSL-style, ShaderLab, Shader Graph, render-pipeline, variant, GPU-cost, and PC/mobile validation guidance.
 - [X] Add measured Unity runtime rules for per-frame work, allocations, lookups, physics queries, object churn, pooling, and platform budgets without blanket API bans.
 - [X] Finish repository identity, routing examples, documentation, validation, and walkthrough alignment for the GameDev-only scope.
-- [ ] Run installed-skill and real-project Unity/GameDev routing tests in the user's intended Codex environment.
-- [ ] Incorporate evidence-backed improvements after the user's cross-project skill/template tests.
-- [ ] Optional: install or synchronize selected skills after separate authorization.
-- [ ] Optional: use `gamedev-unity-development` on an approved Unity task and record real editor/manual feedback.
 - [X] Complete Track S implementation while keeping MCP optional; real-client behavior acceptance remains pending.
 - [X] Include CoplayDev v10.1.2 source inventory and complete MIT notice with the adapted reference.
-- [ ] Run the cross-client verification matrix after user-owned/separately authorized installation.
-- [-] Architecture spike and all MCP milestones: future-only; do not start after Track S without a fresh explicit request.
-
-### Deferred / Blocked
-
-- [-] Public repository visibility: blocked until explicitly requested under a new approved publication plan.
-- [-] Public `LICENSE` file: intentionally omitted; adding one requires a new owner-approved decision.
-- [-] Installed Codex skill synchronization: requires separate permission and filesystem access outside this repository.
-- [-] Unreal Engine skill implementation: plan-only.
-- [-] Phase 6B public distribution, licensing, and release publication remain unauthorized. Section 14 documents a private MCP path, but runtime implementation still requires its explicit decision-gate approvals.
-- [-] Original Phase 6A Git exclusion is superseded only for the explicitly approved local remote configuration, staging, and commit; pushing and GitHub changes remain user-owned.
-- [-] CoplayDev runtime installation, full fork, server-code import, custom-tool extension, and external repository modification: not authorized; only the documented workflow adaptation was approved.
-- [-] Independent MCP runtime repository, dependencies, Unity package installation, Codex MCP configuration, remote hosting, and public registry publication: not authorized.
-- [ ] User-owned private GitHub handoff may resume now that the GameDev specialization baseline is complete and validated.
 
 ---
 
-## Verification & Baseline Status
-
-### Automated Checks & Compilation
+## Historical Verification & Baseline Status
 
 - [X] Repository file inventory completed.
 - [X] Local/source skill file comparison completed: identical baseline confirmed.
@@ -126,7 +92,7 @@
 - [X] Markdown link validation completed: 92 Markdown files passed after the starter-kit delivery.
 - [X] High-confidence secret scan completed with no finding.
 - [X] Private/no-license, renamed-workflow, Unity-present, and Unreal-plan-only boundaries validated.
-- [X] Historical pre-handoff Git baseline confirmed: no agent-run remote, commit, staging, push, branch, tag, or publication action had been performed. The 2026-09-03 approval below authorizes the local handoff actions only.
+- [X] Historical pre-handoff Git baseline confirmed: no agent-run remote, commit, staging, push, branch, tag, or publication action had been performed. The 2026-09-03 approval authorizes the local handoff actions only.
 - [X] Planning-document formatting check: no trailing whitespace found in changed files.
 - [X] All configured `AGENTS.md` Project Profile paths exist.
 - [X] Universal `AGENTS.md` rules are path-, project-, framework-, and engine-neutral.
@@ -142,20 +108,14 @@
 - [X] Whitespace and unfinished-marker scan: 55 Markdown, PowerShell, and YAML files passed.
 - [X] Validator negative case correctly rejected an incorrect expected skill count.
 - [X] Final stale-invocation, high-confidence-secret, no-license, PowerShell syntax, and required GameDev-content checks passed.
-
-### Manual / User Review Status
-
 - [X] Detailed implementation plan: approved.
 - [X] Kumpuni-related walkthrough examples: identified and structurally reviewed.
 - [-] Unity/editor/visual verification: not applicable to this documentation/skill-definition delivery; required when the skill is used on a Unity implementation.
-- [ ] Cross-project starter-kit copy/configuration test: pending user verification.
-- [ ] Newly created/adapted skill behavior: pending user examination and real-project testing.
 - [X] GameDev specialization plan: approved by the user on 2026-08-31.
-- [ ] Private GitHub repository creation and remote verification: ready for the user-owned handoff when the user chooses.
 
 ---
 
-## Permission Ledger
+## Historical Permission Ledger
 
 - Repository-local planning and tracking edits: authorized.
 - Repository-local implementation: authorized and completed through Phase 5 and the generalized starter-kit follow-up.

@@ -13,7 +13,7 @@ Every skill uses the `gamedev-` namespace so this toolkit can coexist with separ
 - The toolkit has an engine-neutral core plus a Unity specialization.
 - Rendering and shaders have dedicated HLSL-style, ShaderLab, Shader Graph, variant, GPU, and PC/mobile guidance.
 - Unreal Engine support remains a future plan and is not exposed as an implemented skill.
-- The repository remains private and intentionally has no license. See [`docs/provenance.md`](docs/provenance.md).
+- The repository remains private and intentionally has no license. See [`Docs/06_Guides/provenance.md`](Docs/06_Guides/provenance.md).
 
 ## Skill Inventory
 
@@ -43,9 +43,11 @@ The toolkit composes skills instead of creating one skill for every discipline. 
 
 ```text
 skills/                         The 17 reusable GameDev skills
-docs/00_Draft/                  Non-authoritative templates and future plans
-docs/07_Walkthrough/            Completed-delivery explanations
-docs/08_Tracking/               Active task and implementation plan
+Docs/00_Drafts/                 (Ignored) Non-authoritative templates and future plans
+Docs/01_Tracking/               Active task tracking and historical archive
+Docs/02_Planning/               Technical implementation plans
+Docs/03_Walkthroughs/           Completed-delivery explanations
+Docs/06_Guides/                 Provenance and cross-client setup guides
 scripts/validate-skills.ps1     Repository-local structural validator
 AGENTS.md                       AI-assisted project rules
 CONTRIBUTING.md                 Skill authoring and validation guidance
@@ -58,31 +60,34 @@ After installation, select the skill using your client's supported mechanism. Th
 
 ```text
 $gamedev-repo-onboarding examine this Unity repository before changes.
-$gamedev-rendering-shaders diagnose this URP shader on Android.
-$gamedev-performance-optimization profile enemy-spawn frame hitches.
+$gamedev-acceptance-criteria turn this game design proposal into observable completion criteria.
+$gamedev-unity-development review our MonoBehaviour lifecycle usage and suggest missing EditMode or PlayMode tests.
 ```
 
-Natural-language requests can also trigger matching skills in clients that support discovery. The workflow toolkit selects one primary skill and only the supporting skills the task needs. See the [cross-client usage guide](docs/skill-portability.md) for Claude Code, Gemini CLI, and chat-only use.
+Natural-language requests can also trigger matching skills in clients that support discovery. The workflow toolkit selects one primary skill and only the supporting skills the task needs. See the [cross-client usage guide](Docs/06_Guides/skill-portability.md) for Claude Code, Gemini CLI, and chat-only use.
 
 ## Installing A Skill
 
-Repository storage and client installation are separate. Follow the [canonical setup guide](docs/skill-portability.md) to select complete folders, choose the client's project-local destination, preserve supporting references and notices, and verify discovery.
+Repository storage and client installation are separate. Follow the [canonical setup guide](Docs/06_Guides/skill-portability.md) to select complete folders, choose the client's project-local destination, preserve supporting references and notices, and verify discovery.
 
 No client installation or synchronization is performed automatically. Compare existing copies before replacement; keep these permission-restricted skills out of public game repositories. Different `gamedev-` names do not overwrite generic app/web skills, but duplicate copies of the same namespaced skill still need a scope review.
 
-## Performance Philosophy
+## Workflow Rules
 
-The toolkit measures before optimizing. It does not ban `Update()` or `Destroy()` categorically:
-
-- Use `Update()` for genuine per-frame work, but keep it focused and avoid repeated allocations, searches, logging, and expensive queries in measured hot paths.
-- Use events or lower-frequency scheduling for state-driven work.
-- Use `FixedUpdate()` for physics-step behavior and `LateUpdate()` only for justified ordering-sensitive behavior.
+- Keep changes surgical and preserve unrelated code.
+- Prefer plain-English pseudocode, verified root cause, and explicit acceptance criteria before implementation.
+- Use measurable evidence before making performance claims.
+- Do not execute unapproved Git mutation commands, package updates, or destructive file operations.
+- Update tracking and handoffs in place; keep active tasks concise and move completed milestones into the archive.
+- Prefer repository evidence and local commands over assuming an installed engine, MCP server, or runtime container.
+- For Unity work, separate confirmed repository facts from live Editor state you cannot observe.
+- Respect hot-path constraints: avoid per-frame allocations, excessive LINQ, unbuffered physics queries, and repeated lookups in tight loops.
 - Use `Destroy()` for one-off cleanup; consider bounded, reset-safe pooling for frequently recreated objects only when profiling shows meaningful churn.
 - Verify changes in representative player builds and target devices, including mobile thermal/memory constraints and PC quality/hardware variance.
 
 ## Development And Validation
 
-Read `AGENTS.md` and `docs/08_Tracking/task.md` before work. Complex changes require current acceptance criteria, plain-English logic, and approval of the detailed plan.
+Read `AGENTS.md` and `Docs/01_Tracking/task.md` before work. Complex changes require current acceptance criteria, plain-English logic, and approval of the detailed plan.
 
 Run the repository validator:
 
@@ -94,13 +99,13 @@ It enforces the exact 17-skill inventory, `gamedev-` namespace, matching frontma
 
 ## Documentation
 
-- [Documentation index](docs/README.md)
-- [Provenance and private-use permission](docs/provenance.md)
-- [Cross-client setup and Kumpuni onboarding prompt](docs/skill-portability.md)
+- [Documentation index](Docs/README.md)
+- [Provenance and private-use permission](Docs/06_Guides/provenance.md)
+- [Cross-client setup and Kumpuni onboarding prompt](Docs/06_Guides/skill-portability.md)
 - [Third-party notices](THIRD_PARTY_NOTICES.md)
-- [Implementation plan](docs/08_Tracking/implementation-plan.md)
-- [Task tracking](docs/08_Tracking/task.md)
-- [GameDev specialization walkthrough](docs/07_Walkthrough/gamedev-workflow-toolkit-specialization.md)
+- [Implementation plan](Docs/02_Planning/implementation-plan.md)
+- [Task tracking](Docs/01_Tracking/task.md)
+- [GameDev specialization walkthrough](Docs/03_Walkthroughs/gamedev-workflow-toolkit-specialization.md)
 
 ## Known Limitations
 

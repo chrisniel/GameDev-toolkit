@@ -6,4 +6,4 @@ The Unity workflow reference adapts selected documentation ideas from CoplayDev 
 
 The adapted file is `skills/gamedev-unity-development/references/unity-editor-workflows.md`. Supporting skill/checklist edits route to that reference or add local evidence and portability guidance; no upstream server, Unity package, or tool-schema catalog is included.
 
-This notice does not license the whole toolkit or broaden the private-use permission for Jeruzael-derived material. See [provenance](docs/provenance.md).
+This notice does not license the whole toolkit or broaden the private-use permission for Jeruzael-derived material. See [provenance](Docs/06_Guides/provenance.md).

@@ -41,7 +41,7 @@ Any public release or broader distribution requires a separate written agreement
 
 ### CoplayDev Workflow Reference
 
-On 2026-09-03, selected Unity workflow ideas from CoplayDev Unity MCP v10.1.2 were adapted into an MCP-free supporting reference. This is documentation adaptation only, not adoption of its server or Unity package. The [third-party notice](../THIRD_PARTY_NOTICES.md) links to the exact sources, adapted file, and complete MIT text bundled inside the Unity skill.
+On 2026-09-03, selected Unity workflow ideas from CoplayDev Unity MCP v10.1.2 were adapted into an MCP-free supporting reference. This is documentation adaptation only, not adoption of its server or Unity package. The [third-party notice](../../THIRD_PARTY_NOTICES.md) links to the exact sources, adapted file, and complete MIT text bundled inside the Unity skill.
 
 The MIT terms apply to CoplayDev-derived portions only. They do not grant public rights over the separate Jeruzael-derived material or license the toolkit as a whole. The repository still has no root `LICENSE`.
 

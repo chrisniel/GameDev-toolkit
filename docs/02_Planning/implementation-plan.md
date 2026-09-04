@@ -1161,7 +1161,7 @@ The user's latest clarification defers U2 and all MCP work until a fresh explici
 
 The user approved Track S, added Gemini/Claude portability, and explicitly kept the MCP as future planning. The renamed working repository is `D:/OtherProjects/gamedev-toolkit`. No game workspace or separate MCP repository was modified.
 
-Implementation retains the 17 skills and adds one progressive Unity workflow reference, portable source notices, task-specific evidence checklist improvements, plain-name routing, and [client setup guidance](../skill-portability.md). The feature-implementation entrypoint received only a portability adjustment to its performance-skill reference. No client-specific duplicate skill pack or installer was added.
+Implementation retains the 17 skills and adds one progressive Unity workflow reference, portable source notices, task-specific evidence checklist improvements, plain-name routing, and [client setup guidance](../06_Guides/skill-portability.md). The feature-implementation entrypoint received only a portability adjustment to its performance-skill reference. No client-specific duplicate skill pack or installer was added.
 
 Current verification:
 

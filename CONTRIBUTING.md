@@ -5,7 +5,7 @@ This repository is currently private. Contributions should preserve the toolkit'
 ## Before Editing
 
 1. Read `AGENTS.md`.
-2. Read `docs/08_Tracking/task.md` and `docs/08_Tracking/implementation-plan.md`.
+2. Read `Docs/01_Tracking/task.md` and `Docs/02_Planning/implementation-plan.md`.
 3. For a new feature or complex change, write plain-English pseudocode and acceptance criteria first.
 4. Confirm that the current detailed plan is approved before implementing it.
 
@@ -47,8 +47,8 @@ The current baseline contains exactly 17 skills. Adding another requires a demon
 
 - Update the closest canonical document when behavior changes.
 - Keep `task.md`, the implementation plan, walkthroughs, and `CHANGELOG.md` aligned.
-- Put completed-delivery explanations under the currently assigned `docs/NN_Walkthrough/` folder.
-- Use `docs/07_Walkthrough/` in this repository unless the documentation topology is deliberately reorganized.
+- Put completed-delivery explanations under `Docs/03_Walkthroughs/`.
+- Maintain standard numbered documentation lifecycle directories as defined in `AGENTS.md`.
 
 ## Verification
 

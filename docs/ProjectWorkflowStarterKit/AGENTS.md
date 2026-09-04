@@ -10,15 +10,15 @@ Configure project-specific paths and boundaries in the Project Profile below. If
 
 ## Project Profile — Configure Per Project
 
-- Project Name: GameDev Workflow Toolkit
-- Active Task File: Docs/01_Tracking/task.md
-- Task Archive Path: Docs/01_Tracking/task_archive.md
-- Implementation Plan File: Docs/02_Planning/implementation-plan.md
-- Walkthrough Folder: Docs/03_Walkthroughs/
-- Changelog File: CHANGELOG.md
-- Primary Tech Stack: Markdown Agent Skills / PowerShell Tooling (GameDev & Unity C#)
-- Manual Verification Areas: Cross-client skill loading (Codex, Claude Code, Gemini CLI), Unity Editor manual handoff, Markdown links, skill validator
-- Protected Boundaries: Private repo; intentionally no root license; do not modify source skills without authorization; no unapproved git operations or external package modifications
+- Project Name: [Insert Project Name]
+- Active Task File: Docs/01_Tracking/task.md [or task.md or Not used]
+- Task Archive Path: Docs/01_Tracking/task_archive.md [or Not used]
+- Implementation Plan File: Docs/02_Planning/implementation-plan.md [or Not used]
+- Walkthrough Folder: Docs/03_Walkthroughs/ [or Not used]
+- Changelog File: CHANGELOG.md [or Not used]
+- Primary Tech Stack: [e.g., Unity C# / Next.js TypeScript / Python FastAPI / flutter / ASP.Net]
+- Manual Verification Areas: [e.g., Game feel, visuals, audio, responsive UI, hardware]
+- Protected Boundaries: [e.g., Private repo; no license changes; do not modify external packages or remote services without authorization]
 
 ---
 

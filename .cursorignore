@@ -1,0 +1,24 @@
+# Universal AI Context Ignore Rules (Token Preservation)
+
+# Ignore full historical logs (append-only)
+**/CHANGELOG.md
+
+# Ignore raw scratchpads and unreviewed brain dumps
+**/Docs/00_Drafts/
+**/Docs/00_Draft/
+**/docs/00_Drafts/
+**/docs/00_Draft/
+
+# Ignore historical archives and superseded tasks
+**/Docs/07_Archive/
+**/Docs/Archive/
+**/docs/07_Archive/
+**/docs/Archive/
+**/task_archive.md
+**/task_history*.md
+
+# Ignore repository workflow manuals and master kit templates
+project-workflow-starter-kit.md
+**/Docs_ProjectWorkflowStarterKit/
+**/docs/ProjectWorkflowStarterKit/
+**/Docs/ProjectWorkflowStarterKit/
