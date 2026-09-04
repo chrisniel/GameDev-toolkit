@@ -51,11 +51,11 @@ STEP 3: DEPLOY OR UPGRADE ROOT FILES
 1. AGENTS.md:
    - Copy Docs_ProjectWorkflowStarterKit/AGENTS.md to the repository root (or upgrade the existing one).
    - Populate its Project Profile using the detected project name, tech stack, and paths:
-     - Active Task File: Docs/01_Tracking/task.md
-     - Task Archive Path: Docs/01_Tracking/task_archive.md
-     - Implementation Plan File: Docs/02_Planning/implementation-plan.md
-     - Walkthrough Folder: Docs/03_Walkthroughs/
-     - Changelog File: CHANGELOG.md
+      - Active Task File: Docs/01_Tracking/task.md
+      - Task Archive Directory: Docs/01_Tracking/archive/
+      - Implementation Plan Directory: Docs/02_Planning/
+      - Walkthrough Folder: Docs/03_Walkthroughs/
+      - Changelog File: CHANGELOG.md
 2. Root Ignore Files:
    - Copy Docs_ProjectWorkflowStarterKit/aiignore-template.md as .aiignore in the project root.
    - Also create a copy named .cursorignore in the project root.
@@ -64,18 +64,19 @@ STEP 3: DEPLOY OR UPGRADE ROOT FILES
 ---
 
 STEP 4: INITIALIZE OR PRUNE TASK TRACKING
-1. Check for an existing task tracking file (at root, in tracking folders, or in Docs/):
+1. Ensure the Docs/01_Tracking/archive/ directory is created.
+2. Check for an existing task tracking file (at root, in tracking folders, or in Docs/):
    - IF AN EXISTING TASK FILE EXISTS:
      - Move it to Docs/01_Tracking/task.md.
-     - Move all completed checklists, verified baselines, and past sprint post-mortems into Docs/01_Tracking/task_archive.md.
+     - Move all completed checklists, verified baselines, and past sprint post-mortems into a dedicated archive file: Docs/01_Tracking/archive/task-[YYYY-MM-DD]-[feature-or-baseline-name].md.
      - In Docs/01_Tracking/task.md, retain ONLY the active sprint or pending bug fix.
      - Place the [CURRENT EXECUTION STATE - HANDOFF] block at the very top.
      - Keep active task.md under 80 lines.
    - IF THIS IS A FRESH PROJECT (No prior task file):
      - Copy Docs_ProjectWorkflowStarterKit/task-template.md to Docs/01_Tracking/task.md.
-     - Create an empty Docs/01_Tracking/task_archive.md.
+     - Ensure Docs/01_Tracking/archive/ exists.
 
-2. Deploy Planning and Walkthrough Templates:
+3. Deploy Planning and Walkthrough Templates:
    - Copy Docs_ProjectWorkflowStarterKit/implementation-plan-template.md to Docs/02_Planning/implementation-plan-template.md (do not overwrite existing active plans).
    - Copy Docs_ProjectWorkflowStarterKit/walkthrough-template.md to Docs/03_Walkthroughs/walkthrough-template.md.
 
@@ -86,4 +87,4 @@ Output a clean summary showing:
 1. Detected Project State (Fresh or Existing), Project Name, and Tech Stack.
 2. The populated Project Profile inside AGENTS.md.
 3. Summary of directories created or files migrated.
-4. Lines pruned into task_archive.md (if an existing project).
+4. Lines pruned into Docs/01_Tracking/archive/ (if an existing project).

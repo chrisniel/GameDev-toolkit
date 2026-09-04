@@ -37,8 +37,8 @@ STEP 2: CONFIGURE AND DEPLOY ROOT AGENTS.MD
 2. Populate the Project Profile header using the parameters provided above:
    - Project Name: [Use Target Project Name]
    - Active Task File: Docs/01_Tracking/task.md
-   - Task Archive Path: Docs/01_Tracking/task_archive.md
-   - Implementation Plan File: Docs/02_Planning/implementation-plan.md
+   - Task Archive Directory: Docs/01_Tracking/archive/
+   - Implementation Plan Directory: Docs/02_Planning/
    - Walkthrough Folder: Docs/03_Walkthroughs/
    - Changelog File: CHANGELOG.md
    - Primary Tech Stack: [Use Target Tech Stack]
@@ -71,7 +71,7 @@ STEP 4: DEPLOY INITIAL WORKING TEMPLATES
      * [ ]  Verify local SDK and tooling installation for [Target Tech Stack]
      * [ ]  Initialize project baseline scaffolding and dependency manifests
      * [ ]  Confirm clean compilation or development server launch
-2. Create an empty Docs/01_Tracking/task_archive.md.
+2. Create the Docs/01_Tracking/archive/ directory.
 3. Copy Docs_ProjectWorkflowStarterKit/implementation-plan-template.md to Docs/02_Planning/implementation-plan-template.md.
 4. Copy Docs_ProjectWorkflowStarterKit/walkthrough-template.md to Docs/03_Walkthroughs/walkthrough-template.md.
 5. Create an initial CHANGELOG.md in the project root with the standard Keep a Changelog format, starting with an Unreleased section.

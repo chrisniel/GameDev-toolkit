@@ -7,9 +7,9 @@
 - Purpose: Provide a universal, token-efficient baseline for AI-assisted development across game, web, and software repositories.
 - Core Pillars:
   1. In-Place Updates: AI agents must update checklists and plans in place rather than stacking duplicate drafts or writing above uncompleted tasks.
-  2. Active vs. Archive Separation: Decouples active sprint execution from completed history to keep active task context under 80 lines.
+  2. Active vs. Archive Separation: Decouples active sprint execution from completed history into dedicated archive files in archive/ to keep active task context under 80 lines and prevent team merge conflicts.
   3. Standard Numbered Layout: Organizes documentation into strict two-digit lifecycle directories (00_Drafts to 07_Archive).
-  4. Context Ignore Shielding: Shields heavy folders (00_Drafts, 07_Archive, CHANGELOG.md) from being ingested by default.
+  4. Context Ignore Shielding: Shields heavy folders (00_Drafts, 07_Archive, 01_Tracking/archive/, CHANGELOG.md) from being ingested by default.
 - Version: v2.0
 - Dependencies: None (Pure Markdown). Compatible with Cursor, Claude Code, Cline, Roo-Code, GitHub Copilot, and web-based LLMs.
 
@@ -30,8 +30,8 @@
 
 Docs/
 |-- 00_Drafts/                 (Ignored by default: Raw ideas, scratchpads, unreviewed notes)
-|-- 01_Tracking/               (Active task.md, task_archive.md)
-|-- 02_Planning/               (Active implementation-plan.md, TDDs, acceptance criteria)
+|-- 01_Tracking/               (Active task.md, archive/ directory)
+|-- 02_Planning/               (plan-[feature-name].md, TDDs, acceptance criteria)
 |-- 03_Walkthroughs/           (walkthrough-*.md, developer handovers)
 |-- 04_Architecture/           (Systems docs, API contracts, data models, technical specs)
 |-- 05_Design/                 (GDD, game lore/story, UI/UX specs, asset documentation)
@@ -44,7 +44,7 @@ Docs/
 
 ### Step 1: Copy Baseline Files
 1. Copy .aiignore and AGENTS.md to the repository root.
-2. Create the Docs/ directory with folders 00_Drafts through 07_Archive.
+2. Create the Docs/ directory with folders 00_Drafts through 07_Archive, plus Docs/01_Tracking/archive/.
 3. Copy task-template.md into Docs/01_Tracking/task.md.
 4. Copy implementation-plan-template.md into Docs/02_Planning/.
 5. Copy walkthrough-template.md into Docs/03_Walkthroughs/.
@@ -55,8 +55,8 @@ Open AGENTS.md and edit only the Project Profile section at the top. Point each 
 #### Example A: Deep Game Development Project
 - Project Name: [Game Title]
 - Active Task File: Docs/01_Tracking/task.md
-- Task Archive Path: Docs/01_Tracking/task_archive.md
-- Implementation Plan File: Docs/02_Planning/implementation-plan.md
+- Task Archive Directory: Docs/01_Tracking/archive/
+- Implementation Plan Directory: Docs/02_Planning/
 - Walkthrough Folder: Docs/03_Walkthroughs/
 - Changelog File: CHANGELOG.md
 - Primary Tech Stack: Unity 6 C#, URP, PrimeTween
@@ -66,8 +66,8 @@ Open AGENTS.md and edit only the Project Profile section at the top. Point each 
 #### Example B: Modern Web Application
 - Project Name: [Web App Name]
 - Active Task File: Docs/01_Tracking/task.md
-- Task Archive Path: Docs/01_Tracking/task_archive.md
-- Implementation Plan File: Docs/02_Planning/implementation-plan.md
+- Task Archive Directory: Docs/01_Tracking/archive/
+- Implementation Plan Directory: Docs/02_Planning/
 - Walkthrough Folder: Docs/03_Walkthroughs/
 - Changelog File: CHANGELOG.md
 - Primary Tech Stack: Next.js 14, TypeScript, Tailwind, Supabase
@@ -77,8 +77,8 @@ Open AGENTS.md and edit only the Project Profile section at the top. Point each 
 #### Example C: Lightweight Utility / Script
 - Project Name: [CLI Tool Name]
 - Active Task File: task.md
-- Task Archive Path: task_archive.md
-- Implementation Plan File: Not used
+- Task Archive Directory: archive/ [or Not used]
+- Implementation Plan Directory: Not used
 - Walkthrough Folder: Not used
 - Changelog File: CHANGELOG.md
 - Primary Tech Stack: Python 3.12, Click
@@ -87,16 +87,19 @@ Open AGENTS.md and edit only the Project Profile section at the top. Point each 
 
 ---
 
-## Core Operational Rules (Token Economics)
+## Core Operational Rules (Token Economics & Team Workflows)
 
 1. The In-Place Golden Rule:
    AI agents must update existing lines and toggle checkboxes [ ] to [x] in place. Never allow an agent to prepend duplicate checklists, summaries, or plans above uncompleted tasks.
 
 2. Active vs. Archive Separation:
-   task.md must remain strictly under 80 lines containing only current active sprint items and the immediate handoff block. Verified completed tasks must be moved to task_archive.md.
+   task.md must remain strictly under 80 lines containing only current active sprint items and the immediate handoff block. Verified completed tasks must be moved to dedicated archive files in Docs/01_Tracking/archive/task-[YYYY-MM-DD]-[feature-name].md to eliminate team merge conflicts.
 
 3. Decoupled Planning and Execution:
-   The AI writes and updates implementation plans in Docs/02_Planning/. Once the user approves the plan, active coding begins, and the AI switches tracking exclusively to task.md, stopping the ingestion of the implementation plan on every turn.
+   The AI writes and updates implementation plans in Docs/02_Planning/ (using feature-specific names like plan-[feature-name].md). Once the user approves the plan, active coding begins, and the AI switches tracking exclusively to task.md, stopping the ingestion of the implementation plan on every turn.
 
-4. Append-Only Changelog:
+4. Team Concurrency & Branch Isolation:
+   Developers working concurrently maintain tasks on dedicated feature branches (feature/[feature-name]). Each branch owns its task.md, and on PR merge to main, verified items are archived into archive/.
+
+5. Append-Only Changelog:
    CHANGELOG.md is strictly for recording delivered features. The agent only reads the top 15 lines if needed to match entry formatting and appends new entries to the top. It never reads the full historical log into memory.

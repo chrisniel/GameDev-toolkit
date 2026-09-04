@@ -13,9 +13,12 @@
 
 **/Docs/07_Archive/
 **/Docs/Archive/
+**/Docs/01_Tracking/archive/
 **/task_archive.md
 **/task_history*.md
 
 # Ignore repository workflow manuals (intended for humans only)
 
 project-workflow-starter-kit.md
+**/ProjectWorkflowStarterKit/
+**/Docs_ProjectWorkflowStarterKit/

@@ -40,4 +40,4 @@ Template Version: Docs_ProjectWorkflowStarterKit_v2.0
 ---
 
 ## Archive Instruction
-*When all tasks in this sprint are verified and completed, cut them and paste them into task_archive.md in this directory. Keep this active file clean and under 80 lines for the next sprint.*
+*When all tasks in this sprint are verified and completed, cut them and save them into a new dedicated archive file: Docs/01_Tracking/archive/task-[YYYY-MM-DD]-[feature-name].md. Keep this active file clean and under 80 lines for the next sprint.*
