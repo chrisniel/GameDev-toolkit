@@ -1,83 +1,43 @@
-# Task Tracking: [Task / Delivery Name]
+# Task Tracking: [Task / Sprint Name]
 
-**Template version:** `Docs_ProjectWorkflowStarterKit_v1.0`
+Template Version: Docs_ProjectWorkflowStarterKit_v2.0
 
-Copy this file to the **Active task file** configured in the project's `AGENTS.md`. Replace every bracketed placeholder, remove unused optional sections, and use `Not used` only when the project genuinely does not track that item.
-
-## Status Overview
-
-- **Current phase:** [Planning / In progress / Verification / User review / Complete / Blocked]
-- **Target:** [One or two sentences describing the intended outcome]
-- **Related implementation plan:** [Configured path / Not used]
-- **Scope guard:** [Files, systems, data, environments, or behaviors that may be changed—and important boundaries that must remain untouched]
+- Status: [Planning / In Progress / Verification / Complete / Blocked]
+- Target: [One or two sentences describing the intended outcome]
+- Scope Guard: [Files, modules, and systems authorized to change; areas that must remain untouched]
 
 ---
 
-## Active And Pending Work
-
-### In Progress
-
-- [ ] [Current active item]
-- [ ] [Immediate next step]
-
-### Completed
-
-- [X] [Verified completed item]
-- [X] [Delivered behavior, artifact, or decision]
-
-### Remaining / Upcoming
-
-- [ ] [Approved remaining item]
-- [ ] [Documentation, validation, or handoff work]
-
-### Blocked / Deferred / Out Of Scope
-
-- [-] [Blocked item — state the dependency or approval needed]
-- [-] [Deferred idea — state where it should be reconsidered]
-- [-] [Explicitly excluded scope]
+## [CURRENT EXECUTION STATE - HANDOFF]
+*Read and update this block in-place on every interaction.*
+- Active Files: [Files currently being edited, inspected, or debugged]
+- Current Blocker / Status: [Active bug, compile error, test failure, or awaiting user approval]
+- Next Immediate Action: [The exact single technical step the next session must perform]
 
 ---
 
-## Decisions And Approvals
+## Active Checklist
+*Update checkboxes in-place. Do not write duplicate task blocks or status overviews above this list.*
 
-- [YYYY-MM-DD] **Decision:** [Decision and reason]
-- [YYYY-MM-DD] **Approval:** [What the user approved]
-- [YYYY-MM-DD] **Assumption:** [Non-blocking assumption that future work must know]
+### Phase 1: [Component / Initial Step Name]
+- [ ] [Specific, testable implementation item]
+- [ ] [Specific, testable implementation item]
 
-Remove this section if the task has no meaningful decision history.
+### Phase 2: [Component / Integration Step Name]
+- [ ] [Specific, testable implementation item]
+- [ ] [Specific, testable implementation item]
 
----
-
-## Verification Status
-
-### Automated / Repository Checks
-
-- [ ] [Build, compile, lint, format, unit, integration, structural, or other relevant check] — [Result / Pending / Not applicable with reason]
-- [ ] [Targeted edge-case or regression check] — [Result / Pending / Not applicable with reason]
-- [ ] Generated artifacts or temporary test data cleaned up — [Yes / Pending / Not applicable]
-
-### Manual / User-Owned Checks
-
-- [ ] [Exact workflow, visual, editor, hardware, environment, or target-device check] — [Pending user verification / Passed with date / Failed with observation / Not applicable]
-- [ ] [Important edge case and expected result] — [Status]
-
-Never mark a user-owned check as passed until the assigned user confirms it.
+### Phase 3: [Verification & Cleanup]
+- [ ] [Regression or test verification item]
+- [ ] [Documentation alignment and handoff update]
 
 ---
 
-## Permission Ledger
-
-- Repository-local implementation: [Authorized / Not authorized / Limited to ...]
-- Destructive actions: [Authorized exact action / Not authorized]
-- Dependency or tool installation: [Authorized exact action / Not authorized]
-- `git add`: [Authorized / Not authorized]
-- `git commit`: [Authorized / Not authorized]
-- `git push`: [Authorized / Not authorized]
-- Branch, tag, pull request, remote, or visibility changes: [Authorized exact action / Not authorized]
-- External systems, deployments, publication, or production/private data: [Authorized exact action / Not authorized]
+## Verification & QA Gates
+- [ ] Automated / Unit checks: [Verified command or script check - Status / Pending]
+- [ ] Manual / User-owned checks: [Exact workflow to test - Pending user review]
 
 ---
 
-## Continuation Note
-
-[One short paragraph telling the next session what to read, what is currently true, what must happen next, and which actions still require approval.]
+## Archive Instruction
+*When all tasks in this sprint are verified and completed, cut them and paste them into task_archive.md in this directory. Keep this active file clean and under 80 lines for the next sprint.*
